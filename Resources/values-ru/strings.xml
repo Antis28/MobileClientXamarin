@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Клиент для ПК</string>
+    <string name="action_settings">Настройки</string>
+    <string name="hello_world_text">Привет мир!</string>
+    
+    <string name="attention">Внимание!</string>
+    <string name="attention_message">Вы действительно хотите выйти из приложения?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+</resources>
