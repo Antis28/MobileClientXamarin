@@ -54,17 +54,29 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClientCore">
+      <HintPath>..\ClientCore\bin\Debug\ClientCore.dll</HintPath>
+    </Reference>
+    <Reference Include="MessegeObjects">
+      <HintPath>..\MyGame\MessegeObjects\bin\Debug\MessegeObjects.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="ThreadViewHelper">
+      <HintPath>..\..\..\My_Progi\C#\_MyDLL\ThreadViewHelper\ThreadViewHelper\bin\Debug\ThreadViewHelper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="ConsoleInTextView.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XamarinPrinter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

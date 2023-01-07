@@ -19,10 +19,189 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
             android:gravity="center" />
+        <TextView
+            android:text="Hello world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerNameText"
+            android:gravity="center"
+            android:textSize="50px" />
         <Button
             android:text="OK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/serverIpAddressEdit" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:gravity="center">
+            <Button
+                android:text="@string/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonLeft"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonRight"
+                android:layout_marginRight="20px"
+                 android:textSize="40px"
+                android:minWidth="300px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:gravity="center">
+            <Button
+                android:text="@string/left10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonLeft10"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/right10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonRight10"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout4"
+            android:gravity="center">
+            <Button
+                android:text="@string/previous_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPrevious"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/next_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonNext"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5"
+            android:gravity="center">
+            <Button
+                android:text="@string/volume_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonVolumeDown"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/volume_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonVolumeUp"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+        </LinearLayout>
+         <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout6"
+            android:gravity="center">
+            <Button
+                android:text="@string/mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonMute"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonMute2"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px"
+                android:visibility="invisible" />   
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout7"
+            android:gravity="center">
+            <Button
+                android:text="@string/play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPlayPause"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />            
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout8"
+            android:gravity="center">
+            <Button
+                android:text="@string/save_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonSaveFile"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+            <Button
+                android:text="@string/load_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonLoadFile"
+                android:layout_marginRight="20px"
+                android:textSize="40px"
+                android:minWidth="300px" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

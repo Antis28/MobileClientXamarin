@@ -7,4 +7,21 @@
     <string name="attention_message">Are you sure you want to exit the app?</string>
   <string name="yes">Yes</string>
   <string name="no">No</string>
+
+  <string name="left">Left</string>
+  <string name="right">Right</string>
+  <string name="left10">Left 10x</string>
+  <string name="right10">Right 10x</string>
+
+  <string name="previous_file">Prev</string>
+  <string name="next_file">Next</string>
+  
+  <string name="volume_up">Volume +</string>
+  <string name="volume_down">Volume -</string>
+  <string name="mute">Mute</string>
+
+  <string name="play_pause">Play / Pause</string>
+  
+  <string name="save_file">Save</string>
+  <string name="load_file">Load</string>
 </resources>
