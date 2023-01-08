@@ -8,10 +8,9 @@ using System;
 namespace MobileClientXamarin
 {
     [Activity(Label = "@string/app_name",         
-        Icon = "@mipmap/ic_launcher",
-        RoundIcon = "@mipmap/ic_launcher_round",
-       Theme = "@style/AppTheme",
-        MainLauncher = true
+            Icon = "@mipmap/ic_launcher",       
+            Theme = "@style/AppTheme",
+            MainLauncher = true
         )]
     public class MainActivity : AppCompatActivity
     {
