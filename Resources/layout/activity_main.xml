@@ -240,7 +240,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout8"
+            android:id="@+id/linearLayout9"
             android:gravity="center">
             <Button
                 android:text="@string/server_sleep"
