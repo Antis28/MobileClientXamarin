@@ -24,4 +24,7 @@
   
   <string name="save_file">Save</string>
   <string name="load_file">Load</string>
+
+  <string name="server_sleep">Sleep</string>
+  <string name="server_weakup">Weakup</string>
 </resources>

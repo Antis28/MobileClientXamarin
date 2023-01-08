@@ -7,7 +7,12 @@ using System;
 
 namespace MobileClientXamarin
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name",         
+        Icon = "@mipmap/ic_launcher",
+        RoundIcon = "@mipmap/ic_launcher_round",
+       Theme = "@style/AppTheme",
+        MainLauncher = true
+        )]
     public class MainActivity : AppCompatActivity
     {
         Client clientView;
@@ -48,6 +53,9 @@ namespace MobileClientXamarin
             var btnSave = FindViewById<Button>(Resource.Id.buttonSaveFile);
             var btnLoad = FindViewById<Button>(Resource.Id.buttonLoadFile);
 
+            var btnHibernate = FindViewById<Button>(Resource.Id.buttonServerHibernate);
+            var btnWeakup = FindViewById<Button>(Resource.Id.buttonServerWeakup);
+
             btnLeft.Click += delegate { clientView.SendLeft(); };
             btnRight.Click += delegate { clientView.SendRight(); };
 
@@ -65,6 +73,10 @@ namespace MobileClientXamarin
 
             btnSave.Click += delegate { clientView.SendSaveName(); };
             btnLoad.Click += delegate { clientView.SendLoadMovie(); };
+
+            btnHibernate.Click += delegate { clientView.SendHibernate(); };
+            btnWeakup.Click += delegate { clientView.SendWol(); };
+
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
