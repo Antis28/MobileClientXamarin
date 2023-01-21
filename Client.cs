@@ -92,6 +92,14 @@ public class Client
     {
         MobileCommandSender.SendCommand("Right", _playerName);
     }
+    public void SendRight(string count)
+    {
+        MobileCommandSender.SendCommand("Right", _playerName + "&" + count);
+    }
+    public void SendLeft(string count)
+    {
+        MobileCommandSender.SendCommand("Left", _playerName + "&" + count);
+    }
 
     public void SendLeft10()
     {

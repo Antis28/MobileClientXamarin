@@ -4,17 +4,19 @@ using Android.Runtime;
 using AndroidX.AppCompat.App;
 using Android.Widget;
 using System;
+using AndroidX.AppCompat.View.Menu;
 
 namespace MobileClientXamarin
 {
-    [Activity(Label = "@string/app_name",         
-            Icon = "@mipmap/ic_launcher",       
+    [Activity(Label = "@string/app_name",
+            Icon = "@mipmap/ic_launcher",
             Theme = "@style/AppTheme",
             MainLauncher = true
         )]
     public class MainActivity : AppCompatActivity
     {
         Client clientView;
+        EditText edit;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,7 +24,11 @@ namespace MobileClientXamarin
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             //CreateButtonHandler();
-            InitLocalText();           
+            InitLocalText();
+
+            var toolbar = FindViewById<ListMenuItemView>(Resource.Id.toolbar);
+            edit = toolbar.FindViewById<EditText>(Resource.Id.editRepeatCount);
+
         }
 
         private void InitLocalText()
@@ -58,8 +64,8 @@ namespace MobileClientXamarin
             btnLeft.Click += delegate { clientView.SendLeft(); };
             btnRight.Click += delegate { clientView.SendRight(); };
 
-            btnLeft10.Click += delegate { clientView.SendLeft10(); };
-            btnRight10.Click += delegate { clientView.SendRight10(); };
+            btnLeft10.Click += delegate { clientView.SendLeft(edit.Text); };
+            btnRight10.Click += delegate { clientView.SendRight(edit.Text); };
 
             btnPrev.Click += delegate { clientView.SendPageUp(); };
             btnNext.Click += delegate { clientView.SendPageDown(); };
@@ -79,7 +85,7 @@ namespace MobileClientXamarin
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {           
+        {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
         private void CreateButtonHandler()
