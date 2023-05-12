@@ -13,12 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
-        android:id="@+id/linearLayout1"> 
+        android:id="@+id/linearLayout1">
         <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />      
-              
-       
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -51,7 +51,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/serverIpAddressEdit" />
         </LinearLayout>
-              
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView1" />
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -68,7 +73,7 @@
                 android:id="@+id/buttonLeft"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/right"
@@ -77,7 +82,7 @@
                 android:id="@+id/buttonRight"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
         <LinearLayout
@@ -96,7 +101,7 @@
                 android:id="@+id/buttonLeft10"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/right10"
@@ -105,7 +110,7 @@
                 android:id="@+id/buttonRight10"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
         <LinearLayout
@@ -124,7 +129,7 @@
                 android:id="@+id/buttonPrevious"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/next_file"
@@ -133,7 +138,7 @@
                 android:id="@+id/buttonNext"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
         <LinearLayout
@@ -152,7 +157,7 @@
                 android:id="@+id/buttonVolumeDown"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/volume_up"
@@ -161,10 +166,10 @@
                 android:id="@+id/buttonVolumeUp"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
-         <LinearLayout
+        <LinearLayout
             android:orientation="horizontal"
             android:paddingTop="5dp"
             android:minWidth="25px"
@@ -180,7 +185,7 @@
                 android:id="@+id/buttonMute"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/mute"
@@ -190,7 +195,7 @@
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
                 android:minWidth="180dp"
-                android:visibility="invisible" />   
+                android:visibility="invisible" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -208,8 +213,8 @@
                 android:id="@+id/buttonPlayPause"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
-                android:minHeight="65dp"  />    
+                android:minWidth="180dp"
+                android:minHeight="65dp"  />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -227,7 +232,7 @@
                 android:id="@+id/buttonSaveFile"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/load_file"
@@ -236,10 +241,10 @@
                 android:id="@+id/buttonLoadFile"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
-         <LinearLayout
+        <LinearLayout
             android:orientation="horizontal"
             android:paddingTop="10dp"
             android:minWidth="25px"
@@ -255,7 +260,7 @@
                 android:id="@+id/buttonServerHibernate"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
             <Button
                 android:text="@string/server_weakup"
@@ -264,7 +269,7 @@
                 android:id="@+id/buttonServerWeakup"
                 android:layout_marginRight="25px"
                 android:textSize="25sp"
-                 android:minWidth="180dp" 
+                android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
     </LinearLayout>

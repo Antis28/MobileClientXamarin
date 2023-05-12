@@ -116,6 +116,8 @@ public class Client
         MobileCommandSender.SendCommand("Volume +", _playerName);
     }
 
+    
+
     public void SendVolumeL()
     {
         MobileCommandSender.SendCommand("Volume -", _playerName);
@@ -139,6 +141,10 @@ public class Client
     public void SendHibernate()
     {
         MobileCommandSender.SendCommand("Hibernate", _playerName);
+    }
+    public void SendHibernate(string text)
+    {
+        MobileCommandSender.SendCommand("Hibernate", text);
     }
 
     public void SendStandBy()

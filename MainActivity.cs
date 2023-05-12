@@ -79,7 +79,7 @@ namespace MobileClientXamarin
             btnSave.Click += delegate { clientView.SendSaveName(); };
             btnLoad.Click += delegate { clientView.SendLoadMovie(); };
 
-            btnHibernate.Click += delegate { clientView.SendHibernate(); };
+            btnHibernate.Click += delegate { clientView.SendHibernate(edit.Text); };
             btnWeakup.Click += delegate { clientView.SendWol(); };
 
         }
