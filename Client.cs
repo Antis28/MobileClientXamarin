@@ -162,7 +162,10 @@ public class Client
 
     public void SendWol()
     {
-        try { WakeOnLan.WakeFunction("001E58A044B5"); }
+        try { 
+            //WakeOnLan.WakeFunction("001E58A044B5");
+            WakeOnLan.WakeFunction("D8BBC1DE3AC7");
+        }
         catch (Exception e)
         {
             ConsoleInTextView.ShowError($"формат : 001E58A044B5  \n{e.Message}");
