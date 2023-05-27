@@ -5,9 +5,11 @@ using AndroidX.AppCompat.App;
 using Android.Widget;
 using System;
 using AndroidX.AppCompat.View.Menu;
+using Android.Content;
 
 namespace MobileClientXamarin
 {
+
     [Activity(Label = "@string/app_name",
             Icon = "@mipmap/ic_launcher",
             Theme = "@style/AppTheme",
@@ -30,7 +32,7 @@ namespace MobileClientXamarin
             edit = toolbar.FindViewById<EditText>(Resource.Id.editRepeatCount);
 
         }
-
+                
         private void InitLocalText()
         {
             //var textView = FindViewById<TextView>(Resource.Id.textView1);
@@ -61,6 +63,12 @@ namespace MobileClientXamarin
             var btnHibernate = FindViewById<Button>(Resource.Id.buttonServerHibernate);
             var btnWeakup = FindViewById<Button>(Resource.Id.buttonServerWeakup);
 
+          //  var btnbatteryCheck = FindViewById<Button>(Resource.Id.batteryCheck);
+
+           var checkBoxBattery = FindViewById<CheckBox>(Resource.Id.checkBoxBattery);
+
+            
+
             btnLeft.Click += delegate { clientView.SendLeft(); };
             btnRight.Click += delegate { clientView.SendRight(); };
 
@@ -81,6 +89,48 @@ namespace MobileClientXamarin
 
             btnHibernate.Click += delegate { clientView.SendHibernate(edit.Text); };
             btnWeakup.Click += delegate { clientView.SendWol(); };
+
+            var ifoView = FindViewById<TextView>(Resource.Id.ifoView);
+            BatteryAlarm.ifoView = ifoView;
+
+            //btnbatteryCheck.Click += delegate { 
+            //    BatteryAlarm.Register();                
+            //};
+            //btnbatteryCheck.Click += (s, arg) =>
+            //{
+            //    //PopupMenu menu = new PopupMenu(this, btnbatteryCheck);
+            //    //menu.Inflate(Resource.Menu.popMenu);
+            //    //menu.Show();
+            //    //menu.MenuItemClick += Menu_MenuItemClick;
+            //};
+
+            DemoService.activity = this;
+            checkBoxBattery.CheckedChange += CheckBoxBattery_CheckedChange;
+        }
+
+        private void CheckBoxBattery_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        {
+            if (e.IsChecked)
+            {
+                StartService();
+            }
+            else
+            {
+                StopService();
+            }
+        }
+
+        private void Menu_MenuItemClick(object sender, PopupMenu.MenuItemClickEventArgs e)
+        {
+            if (e.Item.ItemId == Resource.Id.new_game1)
+            {
+                
+            }
+
+            if (e.Item.ItemId == Resource.Id.help)
+            {
+                throw new NotImplementedException();
+            }
 
         }
 
@@ -107,5 +157,16 @@ namespace MobileClientXamarin
             //    );
             //};
         }
+        private void StartService()
+        {
+            Intent intent = new Intent(this, typeof(DemoService));
+            this.StartService(intent);
+        }
+        private void StopService()
+        {
+            Intent intent = new Intent(this, typeof(DemoService));
+            this.StopService(intent);
+        }
+
     }
 }

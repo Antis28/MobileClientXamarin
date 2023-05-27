@@ -49,7 +49,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/serverIpAddressEdit" />
+                android:id="@+id/serverIpAddressEdit"
+                android:inputType="text" />
         </LinearLayout>
         <ScrollView
             android:minWidth="25px"
@@ -272,5 +273,38 @@
                 android:minWidth="180dp"
                 android:minHeight="65dp"  />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout10"
+            android:gravity="center">
+            <TextView
+                android:text=""               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/batteryCheck"
+                android:layout_marginRight="25px"
+                android:textSize="25sp"
+                android:minWidth="180dp"
+                android:minHeight="65dp"  />  
+            <CheckBox
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:text="Check battery &gt; 90%"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/checkBoxBattery" />
+        </LinearLayout>
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ifoView"
+            android:layout_marginHorizontal="15dp"/>
     </LinearLayout>
 </RelativeLayout>
