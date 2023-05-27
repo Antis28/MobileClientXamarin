@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatteryAlarm.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ConsoleInTextView.cs" />
     <Compile Include="MainActivity.cs" />
