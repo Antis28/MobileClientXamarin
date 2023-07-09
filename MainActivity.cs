@@ -55,6 +55,8 @@ namespace MobileClientXamarin
             var btnVolUp = FindViewById<Button>(Resource.Id.buttonVolumeUp);
 
             var btnMute = FindViewById<Button>(Resource.Id.buttonMute);
+            var btnSkip = FindViewById<Button>(Resource.Id.buttonSkip);
+
             var btnPlay = FindViewById<Button>(Resource.Id.buttonPlayPause);
 
             var btnSave = FindViewById<Button>(Resource.Id.buttonSaveFile);
@@ -82,6 +84,7 @@ namespace MobileClientXamarin
             btnVolUp.Click += delegate { clientView.SendVolumeH(); };
 
             btnMute.Click += delegate { clientView.SendVolumeMute(); };
+            btnSkip.Click += delegate { clientView.SendSkipOpenning(); };
             btnPlay.Click += delegate { clientView.SendSpace(); };
 
             btnSave.Click += delegate { clientView.SendSaveName(); };

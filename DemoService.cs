@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Timers;
+using Android.Support.V4.App;
 
 namespace MobileClientXamarin
 {
@@ -35,6 +36,7 @@ namespace MobileClientXamarin
 
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
+            ///////////////////////////////////////
             Toast.MakeText(this, $"Start timer ", ToastLength.Long).Show();
 
             audioService = new AudioService();
@@ -50,6 +52,7 @@ namespace MobileClientXamarin
             Toast.MakeText(this, text, ToastLength.Long).Show();
 
             return StartCommandResult.Sticky;
+       
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -65,6 +68,21 @@ namespace MobileClientXamarin
                 });
             }
 
+        }
+
+        // This is any integer value unique to the application.
+        public const int SERVICE_RUNNING_NOTIFICATION_ID = 10000;
+
+        
+
+        private Notification.Action BuildStopServiceAction()
+        {
+            throw new NotImplementedException();
+        }
+
+        private Notification.Action BuildRestartTimerAction()
+        {
+            throw new NotImplementedException();
         }
     }
 }

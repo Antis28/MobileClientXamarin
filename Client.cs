@@ -123,6 +123,11 @@ public class Client
         MobileCommandSender.SendCommand("Volume -", _playerName);
     }
 
+    internal void SendSkipOpenning()
+    {
+        MobileCommandSender.SendCommand("SkipOpenning", _playerName);
+    }
+
     public void SendVolumeMute()
     {
         MobileCommandSender.SendCommand("Mute", _playerName);
